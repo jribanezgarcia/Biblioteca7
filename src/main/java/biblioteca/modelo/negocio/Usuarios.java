@@ -160,15 +160,13 @@ public class Usuarios {
     public List<Usuario> todos() throws Exception {
 
         List<Usuario> listaSinNulos = new ArrayList<>();
-        Connection conexion = Conexion.establecerConexion();
-        Statement sentencia = null;
-        ResultSet filas = null;
         String sentenciaStr = "select u.dni, u.nombre, u.email, d.via, d.numero, d.cp, d.localidad " +
                 "from usuario u " +
                 "inner join direccion d on d.dni = u.dni";
-        sentencia = conexion.createStatement();
-        filas = sentencia.executeQuery(sentenciaStr);
-        try {
+
+        Connection conexion = Conexion.establecerConexion();
+        try (PreparedStatement sentencia = conexion.prepareStatement(sentenciaStr);
+             ResultSet filas = sentencia.executeQuery()) {
             while (filas.next()) {
                 Direccion direccionLista = new Direccion(
                         filas.getString("via"),
@@ -181,20 +179,9 @@ public class Usuarios {
                         filas.getString("email"),
                         direccionLista);
                 listaSinNulos.add(usuarioLista);
-
             }
         } catch (SQLException e) {
             throw new Exception("ERROR MySQL: " + e.getMessage());
-        } finally {
-            try {
-                filas.close();
-                sentencia.close();
-
-                Conexion.cerrarConexion();
-
-            } catch (SQLException e) {
-                throw new Exception("Error al cerrar recursos: " + e.getMessage());
-            }
         }
         return listaSinNulos;
     }
