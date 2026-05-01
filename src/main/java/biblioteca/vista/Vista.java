@@ -1,6 +1,7 @@
 package biblioteca.vista;
 
 import biblioteca.Entrada;
+import biblioteca.LanzadorVentanaPrincipal;
 import biblioteca.controlador.Controlador;
 import biblioteca.modelo.dominio.Libro;
 import biblioteca.modelo.dominio.Prestamo;
@@ -16,9 +17,17 @@ import java.util.List;
 public class Vista {
 
 
+    //hacemos la clase Vista Singleton
+    private static Vista instancia;
     private Controlador controlador;
 
     public Vista() {
+    }
+    public static Vista getInstancia(){
+        if(instancia==null){
+            instancia = new Vista();
+        }
+        return instancia;
     }
 
     public void setControlador(Controlador controlador) throws Exception {
@@ -28,13 +37,12 @@ public class Vista {
         this.controlador = controlador;
     }
 
+    public Controlador getControlador(){
+        return controlador;
+    }
     public void comenzar() {
-        Opcion opcion = null;
-        do {
-            Consola.mostrarMenu();
-            opcion = Consola.ElegirOpcion();
-            ejecutarOpcion(opcion);
-        } while (opcion != Opcion.SALIR);
+        LanzadorVentanaPrincipal.comenzar();
+        getControlador().terminar();
     }
 
     public void terminar() {

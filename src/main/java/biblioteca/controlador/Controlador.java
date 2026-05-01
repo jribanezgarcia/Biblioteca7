@@ -32,7 +32,7 @@ public class Controlador {
 
     }
     public void terminar(){
-        Consola.terminar(); //este metodo no existe en el diagrama!!!! pero si se explicaba en la tarea.
+        //Consola.terminar(); //este metodo no existe en el diagrama!!!! pero si se explicaba en la tarea.
         vista.terminar();
         modelo.terminar(); //como aparece en el diagrama lo usamos, aunque no es relevante en este proyecto
         System.out.println("Termina Controlador");

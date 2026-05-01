@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Creada la pagina principal ya en javafx y el login.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioUsuarioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioUsuario.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosUsuarios/altaUsuario.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosUsuarios/bajaUsuario.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosUsuarios/modificarUsuario.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/MenuPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/MenuPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" afterDir="false" />
+    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Actualizacion de varios fxml. Antes de cambiar la visa antigua y dejar bien hecha la estructura principal.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/AppBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/AppBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/AppBibliotecaFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/LanzadorVentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/LanzadoraMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/LanzadoraMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/controlador/Controlador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/Vista.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,32 +77,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Biblioteca7 [:biblioteca.AppBiblioteca.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [:biblioteca.AppBibliotecaFX.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [:biblioteca.LanzadoraMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PrestamosIT (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PrestamosIT.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.VistaIT (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.VistaIT.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/Desktop/!º DAM/programacion/proyectos/Biblioteca7/src/main/resources/img/iconosUsuarios&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Biblioteca7 [:biblioteca.AppBiblioteca.main()].executor": "Run",
+    "Gradle.Biblioteca7 [:biblioteca.AppBibliotecaFX.main()].executor": "Run",
+    "Gradle.Biblioteca7 [:biblioteca.LanzadorVentanaPrincipal.main()].executor": "Run",
+    "Gradle.Biblioteca7 [:biblioteca.LanzadoraMain.main()].executor": "Run",
+    "Gradle.Biblioteca7 [build].executor": "Run",
+    "Gradle.Biblioteca7 [run].executor": "Run",
+    "Gradle.Biblioteca7.executor": "Run",
+    "Gradle.PrestamosIT (1).executor": "Run",
+    "Gradle.PrestamosIT.executor": "Run",
+    "Gradle.VistaIT (1).executor": "Run",
+    "Gradle.VistaIT.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/juan/Desktop/!º DAM/programacion/proyectos/Biblioteca7/src/main/resources/img/iconosUsuarios",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\main\resources\img\iconosUsuarios" />
@@ -196,11 +192,20 @@
       <option name="project" value="LOCAL" />
       <updated>1777318147538</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Actualizacion de varios fxml. Antes de cambiar la visa antigua y dejar bien hecha la estructura principal.">
+      <option name="closed" value="true" />
+      <created>1777627432598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1777627432599</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creada la pagina principal ya en javafx y el login." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creada la pagina principal ya en javafx y el login." />
+    <MESSAGE value="Actualizacion de varios fxml. Antes de cambiar la visa antigua y dejar bien hecha la estructura principal." />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualizacion de varios fxml. Antes de cambiar la visa antigua y dejar bien hecha la estructura principal." />
   </component>
 </project>

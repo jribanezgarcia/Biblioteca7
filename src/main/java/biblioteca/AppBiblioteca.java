@@ -15,7 +15,7 @@ public class AppBiblioteca {
 
             System.out.println("Bienvenido al programa de gestion de reservas de la Biblioteca de Alejandría");
             Modelo modelo = new Modelo();
-            Vista vista = new Vista();
+            Vista vista = Vista.getInstancia();
             Controlador controlador = new Controlador(modelo, vista);
             controlador.comenzar();
 

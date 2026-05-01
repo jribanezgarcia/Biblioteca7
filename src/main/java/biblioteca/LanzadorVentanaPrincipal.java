@@ -8,8 +8,11 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-public class AppBibliotecaFX extends Application {
+public class LanzadorVentanaPrincipal extends Application {
 
+    public static void comenzar(){
+        launch(LanzadorVentanaPrincipal.class);
+    }
     @Override
     public void start(Stage stage) {
         try {
@@ -29,7 +32,4 @@ public class AppBibliotecaFX extends Application {
         }
     }
 
-   public static void main(String[] args) {
-        launch(args);
-    }
 }
