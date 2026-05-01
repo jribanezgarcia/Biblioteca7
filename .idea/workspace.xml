@@ -4,33 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/AppBibliotecaFX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/LanzadoraMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/MenuPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/UsuariosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/recursos/LocalizadorRecursos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/utilidades/Dialogos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Login.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/MenuPrincipal.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/Logo_alejandria.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/icono_libros.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/icono_prestamos.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/icono_usuarios.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosPrincipal/libros.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosPrincipal/prestamos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosPrincipal/usuarios.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo-ies2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/img/pruebapng.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Creada la pagina principal ya en javafx y el login.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioUsuarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioUsuario.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosUsuarios/altaUsuario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosUsuarios/bajaUsuario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/iconosUsuarios/modificarUsuario.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/Prestamos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/Prestamos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/Usuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/Usuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/Vista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/MenuPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/MenuPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +38,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Biblioteca7" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Biblioteca7" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -122,7 +101,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/Desktop/!º DAM/programacion/proyectos/Biblioteca7/src/main/resources/img/iconosPrincipal&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/Desktop/!º DAM/programacion/proyectos/Biblioteca7/src/main/resources/img/iconosUsuarios&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -131,11 +110,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\main\resources\img\iconosUsuarios" />
       <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\main\resources\img\iconosPrincipal" />
       <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\main\resources\img" />
       <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\test\java" />
       <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7" />
-      <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\juan\Desktop\!º DAM\programacion\proyectos\Biblioteca7\src\main\resources\biblioteca\vista\recursos" />
@@ -145,7 +124,7 @@
       <recent name="biblioteca" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Biblioteca7 [build]">
+  <component name="RunManager">
     <configuration name="Biblioteca7 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -209,6 +188,19 @@
       <option name="presentableId" value="Default" />
       <updated>1776872255790</updated>
     </task>
+    <task id="LOCAL-00001" summary="Creada la pagina principal ya en javafx y el login.">
+      <option name="closed" value="true" />
+      <created>1777318147538</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1777318147538</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creada la pagina principal ya en javafx y el login." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creada la pagina principal ya en javafx y el login." />
   </component>
 </project>

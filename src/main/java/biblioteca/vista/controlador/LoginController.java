@@ -49,6 +49,8 @@ public class LoginController {
                 nuevoEscenario.initModality(Modality.APPLICATION_MODAL);
                 nuevoEscenario.setTitle("Menu Principal");
                 nuevoEscenario.setScene(escena2);
+                //ponemos la pantalla principal maximizada
+                nuevoEscenario.setMaximized(true);
                 //ponemos un mensaje de confirmacion si se cierra la ventana principal.
                 nuevoEscenario.setOnCloseRequest(e->confirmarSalida(nuevoEscenario, e));
                 nuevoEscenario.show();
