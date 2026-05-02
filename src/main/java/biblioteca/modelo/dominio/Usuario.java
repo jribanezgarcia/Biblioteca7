@@ -51,6 +51,24 @@ public class Usuario implements Comparable<Usuario>{
         this.direccion = direccion;
     }
 
+   //añadimos estos getters para que me lean las tablas en la clase UsuarioController
+    //todas las columnas deben llevar sus getters de clase asociados.
+    public String getVia() {
+        return direccion.getVia();
+    }
+
+    public String getNumero() {
+        return direccion.getNumero();
+    }
+
+    public String getCp() {
+        return direccion.getCp();
+    }
+
+    public String getLocalidad() {
+        return direccion.getLocalidad();
+    }
+
     public void setDni(String dni) throws Exception {
         if (dni == null || dni.isBlank()) {
             throw new Exception("El ID no puede ser nulo o vacío");

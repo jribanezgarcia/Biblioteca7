@@ -33,7 +33,7 @@
             </VBox>
             <VBox alignment="CENTER">
                <children>
-                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="116.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                  <Button fx:id="botonLibros" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#cargarLibros" prefHeight="116.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
                      <graphic>
                         <ImageView fitHeight="160.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -51,7 +51,7 @@
             </VBox>
             <VBox alignment="CENTER">
                <children>
-                  <Button contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" prefHeight="116.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                  <Button fx:id="botonPrestamos" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#cargarPrestamos" prefHeight="116.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
                      <graphic>
                         <ImageView fitHeight="160.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
                            <image>

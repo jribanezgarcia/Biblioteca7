@@ -22,7 +22,11 @@ import java.util.ResourceBundle;
 public class MenuPrincipalController  {
 
     @FXML
+    private Button botonLibros;
+    @FXML
     private Button botonUsuarios;
+    @FXML
+    private Button botonPrestamos;
 
     @FXML
     private AnchorPane panelContenido;
@@ -38,7 +42,29 @@ public class MenuPrincipalController  {
         escenarioUsuarios.setScene(escena3);
         escenarioUsuarios.showAndWait();
 
+    }
+    @FXML
+    void cargarLibros(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("Libros.fxml"));
+        Parent raiz = fxmlLoader.load();
+        Scene escena = new Scene(raiz);
+        Stage escenarioLibros = new Stage();
+        escenarioLibros.initModality(Modality.APPLICATION_MODAL);
+        escenarioLibros.setTitle("Menu Libros");
+        escenarioLibros.setScene(escena);
+        escenarioLibros.showAndWait();
 
+    }
+    @FXML
+    void cargarPrestamos(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("Prestamos.fxml"));
+        Parent raiz = fxmlLoader.load();
+        Scene escena = new Scene(raiz);
+        Stage escenarioPrestamos = new Stage();
+        escenarioPrestamos.initModality(Modality.APPLICATION_MODAL);
+        escenarioPrestamos.setTitle("Menu Prestamos");
+        escenarioPrestamos.setScene(escena);
+        escenarioPrestamos.showAndWait();
 
     }
 
