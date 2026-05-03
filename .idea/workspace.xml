@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Interfaz grafica Usuarios totalmente funcional. Permite alta, baja y modificacion. Buscar. Implementada la clase Dialogos para los mensajes varios.">
+    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/dominio/Audiolibro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/dominio/Audiolibro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/dominio/Libro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/dominio/Libro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioAutoresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioAutoresController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioLibroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioLibroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioUsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioPrestamoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioPrestamoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LibrosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LibrosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/PrestamosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/PrestamosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/UsuariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/UsuariosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioAutores.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioAutores.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioLibro.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioLibro.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioUsuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Libros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Libros.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioPrestamo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioPrestamo.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Prestamos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Prestamos.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -234,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1777723782938</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect">
+      <option name="closed" value="true" />
+      <created>1777831531824</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1777831531824</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -243,6 +243,7 @@
     <MESSAGE value="Cambiada la Vista a Singleton, compilando perfectamente." />
     <MESSAGE value="Creada la vista de Usuarios. La clase Usuarios consigue leer la base de datos." />
     <MESSAGE value="Interfaz grafica Usuarios totalmente funcional. Permite alta, baja y modificacion. Buscar. Implementada la clase Dialogos para los mensajes varios." />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaz grafica Usuarios totalmente funcional. Permite alta, baja y modificacion. Buscar. Implementada la clase Dialogos para los mensajes varios." />
+    <MESSAGE value="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect" />
   </component>
 </project>

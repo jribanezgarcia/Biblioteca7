@@ -17,16 +17,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.scene.input.KeyEvent;
 
 public class PrestamosController implements Initializable {
 
@@ -63,16 +63,29 @@ public class PrestamosController implements Initializable {
 
 
     @FXML
-    void cargarFormularioPrestamoController(ActionEvent event) throws IOException {
+    void PrestarLibro(ActionEvent event) throws Exception {
         FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioPrestamo.fxml"));
         Parent raiz = fxmlLoader.load();
-        Scene escenaAMUsuaios = new Scene(raiz);
-        Stage escenarioAMUsuarios= new Stage();
-        escenarioAMUsuarios.initModality(Modality.APPLICATION_MODAL);
-        escenarioAMUsuarios.setTitle("Realizar Prestamo");
-        escenarioAMUsuarios.setScene(escenaAMUsuaios);
-        escenarioAMUsuarios.setResizable(false);
-        escenarioAMUsuarios.showAndWait();
+        Scene escena = new Scene(raiz);
+        FormularioPrestamoController cF= fxmlLoader.getController();
+        cF.setRegistroLibro(null);
+        cF.setRegistroUsuario(null);
+        //pasamos las listas al formulario de prestamos
+        cF.setListaLibros(Vista.getInstancia().getControlador().listadoLibros());
+        cF.setListaUsuarios(Vista.getInstancia().getControlador().listadoUsuario());
+        Stage escenario= new Stage();
+        escenario.initModality(Modality.APPLICATION_MODAL);
+        escenario.setTitle("Realizar Prestamo");
+        escenario.setScene(escena);
+        escenario.setResizable(false);
+        escenario.showAndWait();
+        //recibimos el prestamo del formulario y lo sacamos para usarlo.
+        /*Prestamo p = cF.getRegistro();
+        if(p != null){
+            Vista.getInstancia().getControlador().prestar(p.getLibro(), p.getUsuario(), p.getfInicio());
+        }*/
+
+        this.refrescarTabla();
     }
 
     @Override
@@ -117,7 +130,10 @@ public class PrestamosController implements Initializable {
     void BuscarPrestamo(KeyEvent event) throws Exception {
         this.filtro= this.txtBuscarPrestamo.getText();
         this.refrescarTabla();
-
+    }
+    @FXML
+    void SeleccionarPrestamo(MouseEvent event){
+        this.registro=this.tablePrestamos.getSelectionModel().getSelectedItem();
     }
 
     private void refrescarTabla() throws Exception {
@@ -134,4 +150,5 @@ public class PrestamosController implements Initializable {
             }
         }
     }
+
 }

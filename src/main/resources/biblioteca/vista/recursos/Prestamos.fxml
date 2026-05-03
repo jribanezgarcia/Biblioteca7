@@ -19,7 +19,7 @@
          <children>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="botonPrestar" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#cargarFormularioPrestamoController" prefHeight="93.0" prefWidth="96.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                  <Button fx:id="botonPrestar" contentDisplay="GRAPHIC_ONLY" mnemonicParsing="false" onAction="#PrestarLibro" prefHeight="93.0" prefWidth="96.0" style="-fx-background-color: transparent; -fx-cursor: hand;">
                      <graphic>
                         <ImageView fitHeight="58.0" fitWidth="97.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -59,7 +59,7 @@
       </HBox>
       <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #c7c8ca;" VBox.vgrow="ALWAYS">
          <children>
-            <TableView fx:id="tablePrestamos" prefHeight="408.0" prefWidth="596.0" StackPane.alignment="CENTER">
+            <TableView fx:id="tablePrestamos" onMouseClicked="#SeleccionarPrestamo" prefHeight="408.0" prefWidth="596.0" StackPane.alignment="CENTER">
               <columns>
                 <TableColumn fx:id="colILibro" prefWidth="255.0" style="-fx-alignment: CENTER;" text="Libro" />
                 <TableColumn fx:id="colUsuario" prefWidth="129.0" style="-fx-alignment: CENTER;" text="Usuario" />

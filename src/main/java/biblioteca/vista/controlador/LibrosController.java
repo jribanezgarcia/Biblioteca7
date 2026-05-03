@@ -5,7 +5,6 @@ import biblioteca.modelo.dominio.Libro;
 import biblioteca.utilidades.Dialogos;
 import biblioteca.vista.Vista;
 import biblioteca.vista.recursos.LocalizadorRecursos;
-import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -24,8 +23,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 import java.net.URL;
-import java.time.Duration;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -68,30 +67,29 @@ public class LibrosController implements Initializable {
 
     @FXML
     void addLibro(ActionEvent event) throws Exception {
-            FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioLibro.fxml"));
-            Parent raiz = fxmlLoader.load();
-            Scene escena = new Scene(raiz);
-            //pasamos este controler a la nueva clase.
-            FormularioLibroController cF= fxmlLoader.getController();
-            cF.setListaLibros(this.listaLibros);
-            cF.setRegistro(null);
-
-            Stage escenarioDMLibro= new Stage();
-            escenarioDMLibro.initModality(Modality.APPLICATION_MODAL);
-            escenarioDMLibro.setTitle("Formulario Libro");
-            escenarioDMLibro.setScene(escena);
-            escenarioDMLibro.setResizable(false);
-            escenarioDMLibro.showAndWait();
-            Libro l = cF.getRegistro();
-            if (l!=null){
-                try{
-                    Vista.getInstancia().getControlador().alta(l);
-                }catch (Exception e){
-                    Dialogos.mostrarDialogoAdvertencia("ERROR Añadir Libro", e.getMessage());
-                }
-
+        FXMLLoader fxmlLoader = new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioLibro.fxml"));
+        Parent raiz = fxmlLoader.load();
+        Scene escena = new Scene(raiz);
+        //pasamos este controler a la nueva clase.
+        FormularioLibroController cF = fxmlLoader.getController();
+        cF.setListaLibros(this.listaLibros);
+        cF.setRegistro(null);
+        Stage escenarioDMLibro = new Stage();
+        escenarioDMLibro.initModality(Modality.APPLICATION_MODAL);
+        escenarioDMLibro.setTitle("Formulario Libro");
+        escenarioDMLibro.setScene(escena);
+        escenarioDMLibro.setResizable(false);
+        escenarioDMLibro.showAndWait();
+        Libro l = cF.getRegistro();
+        if (l != null) {
+            try {
+                Vista.getInstancia().getControlador().alta(l);
+            } catch (Exception e) {
+                Dialogos.mostrarDialogoAdvertencia("ERROR Añadir Libro", e.getMessage());
             }
-            this.refrescarTabla();
+
+        }
+        this.refrescarTabla();
     }
 
     @FXML
