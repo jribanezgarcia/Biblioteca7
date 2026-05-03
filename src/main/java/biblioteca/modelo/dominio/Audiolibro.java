@@ -16,6 +16,10 @@ public class Audiolibro extends Libro{
         this.setFormato(audiolibro.getFormato());
 
     }
+    //añadimos para qu ela tabla lo muestre como texto
+    public String getDuracionComoCadena() {
+        return String.format("%02d:%02d:%02d", duracion.toHours(), duracion.toMinutesPart(), duracion.toSecondsPart());
+    }
 
     public Duration getDuracion() {
         return duracion;

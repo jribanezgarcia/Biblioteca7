@@ -10,11 +10,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.util.List;
 import javafx.event.ActionEvent;
 
 public class FormularioUsuarioController {
 
+    @FXML
+    private Button botonCancelar;
     @FXML
     private Button botonGuardarUsuario;
 
@@ -51,6 +55,7 @@ public class FormularioUsuarioController {
     }
     public void setRegistro(Usuario u){
         this.registro = u;
+
         if(this.registro!=null){
             labelUsuario.setText("Editar Usuario");
             this.txtDni.setText(this.registro.getDni());
@@ -81,34 +86,23 @@ public class FormularioUsuarioController {
             if(this.registro==null){
                 Direccion direccion = new Direccion(via,numero,cp,localidad);
                 Usuario u= new Usuario(dni,nombre,email,direccion);
-                if(this.listaUsuarios.contains(u)==false){
-                    //Añadimos el usuario a la base de datos.
-                    Vista.getInstancia().getControlador().alta(u);
+                if(!this.listaUsuarios.contains(u)){
                     Dialogos.mostrarDialogoAdvertencia("Mensaje Usuario","Usuario añadido correctamente");
-                    this.registro= u;
+                    this.registro=u;
                     Stage escenarioActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     escenarioActual.close();
                 }else{
                     Dialogos.mostrarDialogoAdvertencia("Mensaje Usuario","El Usuario ya existe");
                 }
-            //modificamos un usuario existente
             }else{
-                /*this.registro.setDni(dni);
-                this.registro.setNombre(nombre);
-                this.registro.setEmail(email);
-                this.registro.setDireccion(new Direccion(via,numero,cp,localidad));*/
-                //prueba "modificar" base de datos , en realdiad es baja y alta no update
-                Direccion direccion = new Direccion(via, numero, cp, localidad);
-                Usuario uNuevo = new Usuario(dni, nombre, email, direccion);
-                // this.registro sigue siendo el usuario ORIGINAL (con el DNI antiguo)
-                Vista.getInstancia().getControlador().baja(this.registro);
-                Vista.getInstancia().getControlador().alta(uNuevo);
-
-                Dialogos.mostrarDialogoAdvertencia("Mensaje Usuario","Usuario MODIFICADO correctamente");
+                //creamos un nuevo objeto para pasarselo al controlador
+                Direccion direccion= new Direccion(via,numero,cp,localidad);
+                this.registro = new Usuario(dni,nombre,email,direccion);
+                Dialogos.mostrarDialogoInformacion("Mensaje Usuario","Usuario modificado correctamente");
                 Stage escenarioActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 escenarioActual.close();
-            }
 
+            }
 
         }catch (NumberFormatException e){
             Dialogos.mostrarDialogoError("Error Guardar Usuario", "Tiene que ser un numero ese campo");
@@ -116,6 +110,12 @@ public class FormularioUsuarioController {
             Dialogos.mostrarDialogoError("Error Guardar Usuario", e.getMessage());
         }
 
+    }
+    @FXML
+    void onCancelar(ActionEvent event) throws IOException {
+        this.registro=null;
+        Stage escenarioActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        escenarioActual.close();
     }
 
 

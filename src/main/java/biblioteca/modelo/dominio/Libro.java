@@ -48,8 +48,8 @@ public class Libro implements Comparable<Libro>{
         this.autores = autores;
     }
 
-    //Metodo para recorrer el Array de autores y crear un String con todos los autores. Que luego se implementara en el metodo toString del Libro.
-    private String autoresComoCadena() {
+    //cambiamos a public este metodo para usarlo en la tabla
+    public String getAutoresComoCadena() {
         String cadenaDeAutores = "";
         int numerar = 1;
         for (Autor autor: autores) {
@@ -145,7 +145,7 @@ public class Libro implements Comparable<Libro>{
                 "\nCategoria=" + this.categoria +
                 "\nISBN='" + this.isbn + '\'' +
                 "\nAño=" + this.anio +
-                "\n" + autoresComoCadena();
+                "\n" + getAutoresComoCadena();
     }
     //metodo ordena primero alfabéticamente sin tener en cuenta mayusculas o minúsculas.
     public int compareTo(Libro o) {

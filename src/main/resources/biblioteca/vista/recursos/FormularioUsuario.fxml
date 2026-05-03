@@ -7,6 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -54,7 +55,12 @@
                   <Insets left="20.0" right="20.0" />
                </VBox.margin>
             </GridPane>
-            <Button fx:id="botonGuardarUsuario" mnemonicParsing="false" onAction="#GuardarUsuario" text="Guardar" />
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="311.0" spacing="60.0">
+               <children>
+                  <Button fx:id="botonGuardarUsuario" mnemonicParsing="false" onAction="#GuardarUsuario" text="Guardar" />
+                  <Button fx:id="botonCancelar" mnemonicParsing="false" onAction="#onCancelar" text="Cancelar" />
+               </children>
+            </HBox>
          </children>
       </VBox>
    </children>

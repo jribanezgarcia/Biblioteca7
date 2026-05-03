@@ -61,8 +61,10 @@ public class UsuariosController implements Initializable {
 
     @FXML
     private TableColumn<Usuario, String> colVia;
+
     @FXML
     private TableView<Usuario> tablaUsuarios;
+
     List<Usuario> listaUsuarios;
     private ObservableList<Usuario> listaUsuariosVisible;
     private Usuario registro;
@@ -85,6 +87,16 @@ public class UsuariosController implements Initializable {
         escenarioAMUsuarios.setResizable(false);
         escenarioAMUsuarios.showAndWait();
         //refrescamos la tabla despues de añadir un usuario
+        //Añadimos el usuario a la base de datos.
+        Usuario u = cF.getRegistro();
+        if(u!=null){
+            try{
+                Vista.getInstancia().getControlador().alta(u);
+            } catch (Exception e) {
+                Dialogos.mostrarDialogoAdvertencia("ERROR", e.getMessage());
+            }
+        }
+
         this.refrescarTabla();
 
     }
@@ -109,13 +121,13 @@ public class UsuariosController implements Initializable {
         try {
             this.listaUsuarios= Vista.getInstancia().getControlador().listadoUsuario();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            Dialogos.mostrarDialogoError("ERROR al inicializar",e.getMessage());
         }
         //refrescamos la tabla para cargarla pasando los datos de listaUsuarios a ListaUsuariosVisible
         try {
             this.refrescarTabla();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            Dialogos.mostrarDialogoError("ERROR al inicializar",e.getMessage());
         }
 
 
@@ -135,7 +147,7 @@ public class UsuariosController implements Initializable {
                 Vista.getInstancia().getControlador().baja(this.registro);
                 Dialogos.mostrarDialogoInformacion("Borrar Usuario","Usuario borrado correctamente");
             }catch(Exception e){
-
+                Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
             }
             this.refrescarTabla();
         }
@@ -147,6 +159,8 @@ public class UsuariosController implements Initializable {
             Dialogos.mostrarDialogoAdvertencia("ERROR Editar Usuario","No has seleccionado ningun Usuario");
         }else{
             try{
+                //guardamos el usuario viejo antes de modificar el registro.
+                Usuario usuarioViejo= this.registro;
                 FXMLLoader fxmlLoader = new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioUsuario.fxml"));
                 Parent raiz = fxmlLoader.load();
                 Scene escena = new Scene(raiz);
@@ -162,10 +176,19 @@ public class UsuariosController implements Initializable {
                 nuevoEscenario.setTitle("Editar persona...");
                 nuevoEscenario.setScene(escena);
                 nuevoEscenario.showAndWait();
-                //refrescamos solo la tabla de la vista, porque solo se modifico el mismo objeto no se ha modificado la DB.
-                //Esto lo he hecho asi porque Usuario no tiene metodo Modificar.
-                //this.tablaUsuarios.refresh();
-                //refrescamos la tabla con ls modificaciones de la BD.
+
+                //Guardamos el usuario modificado.
+                Usuario usuarioModificado = cF.getRegistro();
+                //try catch con las llamadas a la base de datos.
+                if(usuarioModificado!=null && !usuarioModificado.equals(usuarioViejo)){
+                    try{
+                        Vista.getInstancia().getControlador().baja(usuarioViejo);
+                        Vista.getInstancia().getControlador().alta(usuarioModificado);
+                    } catch (Exception e) {
+                        Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
+                    }
+                }
+
                 this.refrescarTabla();
 
             } catch (Exception e) {
@@ -173,6 +196,7 @@ public class UsuariosController implements Initializable {
             }
         }
     }
+    //metodo para seleccionar desde la tabla al pinchar
     @FXML
     void SeleccionarUsuario(MouseEvent event){
         this.registro = this.tablaUsuarios.getSelectionModel().getSelectedItem();
