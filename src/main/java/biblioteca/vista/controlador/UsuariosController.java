@@ -144,8 +144,10 @@ public class UsuariosController implements Initializable {
             Dialogos.mostrarDialogoInformacion("Error","No has seleccionado ningun Usuario");
         }else{
             try{
-                Vista.getInstancia().getControlador().baja(this.registro);
-                Dialogos.mostrarDialogoInformacion("Borrar Usuario","Usuario borrado correctamente");
+                if(Dialogos.mostrarDialogoConfirmacion("ERROR","¿Esta seguro que quiere borrar el usuario?",(Stage) tablaUsuarios.getScene().getWindow())){
+                    Vista.getInstancia().getControlador().baja(this.registro);
+                    Dialogos.mostrarDialogoInformacion("Borrar Usuario","Usuario borrado correctamente");
+                }
             }catch(Exception e){
                 Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
             }
@@ -180,7 +182,7 @@ public class UsuariosController implements Initializable {
                 //Guardamos el usuario modificado.
                 Usuario usuarioModificado = cF.getRegistro();
                 //try catch con las llamadas a la base de datos.
-                if(usuarioModificado!=null && !usuarioModificado.equals(usuarioViejo)){
+                if(usuarioModificado!=null){
                     try{
                         Vista.getInstancia().getControlador().baja(usuarioViejo);
                         Vista.getInstancia().getControlador().alta(usuarioModificado);

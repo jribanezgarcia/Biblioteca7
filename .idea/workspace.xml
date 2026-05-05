@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioPrestamoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioPrestamoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LibrosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LibrosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/PrestamosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/PrestamosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioPrestamo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/FormularioPrestamo.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Prestamos.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Prestamos.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,12 +39,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="aiven" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -78,33 +76,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Biblioteca7 [:biblioteca.AppBiblioteca.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [:biblioteca.AppBibliotecaFX.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [:biblioteca.LanzadorVentanaPrincipal.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [:biblioteca.LanzadoraMain.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7 [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Biblioteca7.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PrestamosIT (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PrestamosIT.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.VistaIT (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.VistaIT.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/Desktop/DAM/programacion/proyectos/Biblioteca7/src/main/resources/biblioteca/vista/recursos&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Biblioteca7 [:biblioteca.AppBiblioteca.main()].executor": "Run",
+    "Gradle.Biblioteca7 [:biblioteca.AppBibliotecaFX.main()].executor": "Run",
+    "Gradle.Biblioteca7 [:biblioteca.LanzadorVentanaPrincipal.main()].executor": "Run",
+    "Gradle.Biblioteca7 [:biblioteca.LanzadoraMain.main()].executor": "Run",
+    "Gradle.Biblioteca7 [build].executor": "Run",
+    "Gradle.Biblioteca7 [run].executor": "Run",
+    "Gradle.Biblioteca7.executor": "Run",
+    "Gradle.Build Biblioteca7.executor": "Run",
+    "Gradle.PrestamosIT (1).executor": "Run",
+    "Gradle.PrestamosIT.executor": "Run",
+    "Gradle.VistaIT (1).executor": "Run",
+    "Gradle.VistaIT.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Rebasing main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/juan/Desktop/DAM/programacion/proyectos/Biblioteca7/src/main/resources/biblioteca/vista/recursos",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.appearance"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\juan\Desktop\DAM\programacion\proyectos\Biblioteca7\src\main\resources\biblioteca\vista\recursos" />
@@ -173,6 +172,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Biblioteca7 [run]" />
+        <item itemvalue="Gradle.Biblioteca7 [build]" />
+        <item itemvalue="Gradle.Biblioteca7 [run]" />
         <item itemvalue="Gradle.Biblioteca7 [build]" />
         <item itemvalue="Gradle.Biblioteca7 [run]" />
       </list>
@@ -234,8 +236,91 @@
       <option name="project" value="LOCAL" />
       <updated>1777831531824</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Avanzado prestamos">
+      <option name="closed" value="true" />
+      <created>1777841014882</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1777841014882</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Tarea 9 de JavaFX acabada y totalmente funcional. Lista para entregar.">
+      <option name="closed" value="true" />
+      <created>1777917391125</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1777917391125</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777981205589</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1777981205589</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777985239406</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985239406</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777985660812</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1777985660812</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777995363569</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1777995363569</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777995473935</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1777995473935</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777995612905</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1777995612905</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <option name="closed" value="true" />
+      <created>1777997181045</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1777997181045</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Creada la pagina principal ya en javafx y el login." />
@@ -244,6 +329,10 @@
     <MESSAGE value="Creada la vista de Usuarios. La clase Usuarios consigue leer la base de datos." />
     <MESSAGE value="Interfaz grafica Usuarios totalmente funcional. Permite alta, baja y modificacion. Buscar. Implementada la clase Dialogos para los mensajes varios." />
     <MESSAGE value="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect" />
-    <option name="LAST_COMMIT_MESSAGE" value="Terminada completamente LibrosController, FormularioAutoresController, FormularioLibroController. Encaminado Prestamos controler y ect" />
+    <MESSAGE value="Avanzado prestamos" />
+    <MESSAGE value="Tarea 9 de JavaFX acabada y totalmente funcional. Lista para entregar." />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
+    <MESSAGE value="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional." />
   </component>
 </project>

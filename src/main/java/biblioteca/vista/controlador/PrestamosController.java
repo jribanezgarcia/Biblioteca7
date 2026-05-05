@@ -63,13 +63,39 @@ public class PrestamosController implements Initializable {
 
 
     @FXML
+    void DevolverLibro(ActionEvent event) throws Exception {
+        if(this.registro==null){
+           Dialogos.mostrarDialogoInformacion("Error al devolver libro","No has seleccionado ningún Préstamo");
+        }else{
+            try{
+                FXMLLoader fxmlLoader= new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioDevolucion.fxml"));
+                Parent raiz= fxmlLoader.load();
+                Scene escena= new Scene(raiz);
+                FormularioDevolucionController cF=fxmlLoader.getController();
+                Stage escenario = new Stage();
+                escenario.initModality(Modality.APPLICATION_MODAL);
+                escenario.setTitle("Devolver Libro");
+                escenario.setScene(escena);
+                escenario.setResizable(false);
+                escenario.showAndWait();
+
+                LocalDate fDevolucion= cF.getFechaDevolucion();
+
+                Vista.getInstancia().getControlador().devolver(this.registro.getLibro(),this.registro.getUsuario(),fDevolucion);
+                Dialogos.mostrarDialogoInformacion("Devolver Libro","Libro devuelto correctamente");
+            } catch (Exception e) {
+                Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
+            }
+            this.refrescarTabla();
+        }
+    }
+    @FXML
     void PrestarLibro(ActionEvent event) throws Exception {
         FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioPrestamo.fxml"));
         Parent raiz = fxmlLoader.load();
         Scene escena = new Scene(raiz);
         FormularioPrestamoController cF= fxmlLoader.getController();
-        cF.setRegistroLibro(null);
-        cF.setRegistroUsuario(null);
+
         //pasamos las listas al formulario de prestamos
         cF.setListaLibros(Vista.getInstancia().getControlador().listadoLibros());
         cF.setListaUsuarios(Vista.getInstancia().getControlador().listadoUsuario());
@@ -79,11 +105,11 @@ public class PrestamosController implements Initializable {
         escenario.setScene(escena);
         escenario.setResizable(false);
         escenario.showAndWait();
-        //recibimos el prestamo del formulario y lo sacamos para usarlo.
-        /*Prestamo p = cF.getRegistro();
+
+        Prestamo p = cF.getRegistro();
         if(p != null){
             Vista.getInstancia().getControlador().prestar(p.getLibro(), p.getUsuario(), p.getfInicio());
-        }*/
+        }
 
         this.refrescarTabla();
     }

@@ -141,7 +141,8 @@ public class Libro implements Comparable<Libro>{
 
     @Override
     public String toString() {
-        return "\nTitulo='" + this.titulo + '\'' +
+        return "Libro "+
+                "\nTitulo='" + this.titulo + '\'' +
                 "\nCategoria=" + this.categoria +
                 "\nISBN='" + this.isbn + '\'' +
                 "\nAño=" + this.anio +

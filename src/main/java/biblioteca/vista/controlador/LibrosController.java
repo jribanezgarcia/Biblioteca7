@@ -98,8 +98,10 @@ public class LibrosController implements Initializable {
             Dialogos.mostrarDialogoInformacion("Error al borrar libro","No has seleccionado ningun Libro");
         }else{
             try{
-                Vista.getInstancia().getControlador().baja(this.registro);
-                Dialogos.mostrarDialogoInformacion("Borrar Libro","Libro borrado correctamente");
+                if(Dialogos.mostrarDialogoConfirmacion("ERROR","Esta seguro que quiere borrar el libro",(Stage) tablaLibros.getScene().getWindow())){
+                    Vista.getInstancia().getControlador().baja(this.registro);
+                    Dialogos.mostrarDialogoInformacion("Borrar Libro","Libro borrado correctamente");
+                }
             }catch (Exception e){
                 Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
             }
@@ -127,7 +129,7 @@ public class LibrosController implements Initializable {
                 nuevoEscenario.setMaximized(false);
                 nuevoEscenario.showAndWait();
                 Libro libroModificado = cF.getRegistro();
-                if(libroModificado!=null && !libroModificado.equals(libroViejo)){
+                if(libroModificado!=null){
                     try{
                         Vista.getInstancia().getControlador().baja(libroViejo);
                         Vista.getInstancia().getControlador().alta(libroModificado);

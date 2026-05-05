@@ -50,10 +50,13 @@ public class Audiolibro extends Libro{
         long horas = duracion.toHours();
         int minutos = duracion.toMinutesPart();
         int segundos = duracion.toSecondsPart();
-        return "\n- Audiolibro -"
-                +super.toString()+ //usamos String.format para que sea mas legible con "%02d para cumplir con hh:mm:ss que pide el ejercicio"
+        return "Audiolibro"+
+                "\nTitulo: "+super.getTitulo()+
+                "\nCategoria: " + super.getCategoria() +
+                "\nISBN: '" + super.getIsbn() +
+                "\nAño: " + super.getAnio() +
+                "\n" + super.getAutoresComoCadena()+
                 String.format("Duración= %02d:%02d:%02d", horas, minutos, segundos)+
-                //"Duración= " +horas+": "+minutos+": "+segundos +
                 ", formato='" + formato + '\'';
     }
 }

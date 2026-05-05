@@ -124,9 +124,9 @@ public class Usuario implements Comparable<Usuario>{
     @Override
     public String toString() {
         return "Usuario"+
-                "\nnombre='" + this.nombre + '\'' +
-                "\ndni='" + this.dni + '\'' +
-                "\nemail='" + this.email + '\'' +
+                "\nNombre: " + this.nombre +
+                "\nDni='" + this.dni + '\'' +
+                "\nEmail='" + this.email + '\'' +
                 "\n"+ this.direccion;
     }
     //comparamos por nombre ignorando mayúsculas y minúsculas.

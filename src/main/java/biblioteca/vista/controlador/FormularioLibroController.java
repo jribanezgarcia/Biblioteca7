@@ -165,7 +165,7 @@ public class FormularioLibroController implements Initializable {
                 }
                //comprobamos que el libro no este ya en la lista, si es asi lo ponemos a null.
                if(!this.listaLibros.contains(l)){
-                   biblioteca.utilidades.Dialogos.mostrarDialogoAdvertencia("Mensaje Libros","Libro añadido correctamente");
+                   Dialogos.mostrarDialogoAdvertencia("Mensaje Libros","Libro añadido correctamente");
                    this.registro=l;
                    Stage escenario = (Stage) ((Node) event.getSource()).getScene().getWindow();
                    escenario.close();

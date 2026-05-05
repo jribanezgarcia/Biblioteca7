@@ -1,0 +1,24 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_05_05_2026_13_23_[Changes]1" date="1777980258450" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2026_13_23_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 05/05/2026 13:23 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/img/Logo_alejandria.png" />
+    <option name="AFTER_PATH" value="src/main/resources/img/Logo_alejandria.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2026_13_23_[Changes]1/Logo_alejandria.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/img/IconosLibros/modificarLibro.png" />
+    <option name="AFTER_PATH" value="src/main/resources/img/IconosLibros/modificarLibro.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2026_13_23_[Changes]1/modificarLibro.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/img/iconosPrincipal/prestamos.png" />
+    <option name="AFTER_PATH" value="src/main/resources/img/iconosPrincipal/prestamos.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2026_13_23_[Changes]1/prestamos.png" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/img/IconosLibros/altaLibro.png" />
+    <option name="AFTER_PATH" value="src/main/resources/img/IconosLibros/altaLibro.png" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_05_05_2026_13_23_[Changes]1/altaLibro.png" />
+  </binary>
+</changelist>

@@ -8,6 +8,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -43,9 +44,19 @@
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Titulo" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Año" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                   <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Categoria" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-                  <TextField fx:id="txtIsbn" style="-fx-background-radius: 20;" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtIsbn" style="-fx-background-radius: 20;" GridPane.columnIndex="1">
+                     <tooltip>
+                        <Tooltip text="Debe ser un número de 13 dígitos que empiece por 978 o 979. &#10;Ejemplo 9788437604947">
+                           <font>
+                              <Font name="Fira Code Light" size="12.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip></TextField>
                   <TextField fx:id="txtTitulo" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtAnio" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtAnio" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <tooltip>
+                        <Tooltip text="Debe ser mayor que 1" />
+                     </tooltip></TextField>
                   <CheckBox fx:id="checkBoxAudioLibro" mnemonicParsing="false" onAction="#esAudioLibro" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4">
                      <GridPane.margin>
                         <Insets left="10.0" />
@@ -54,8 +65,11 @@
                   <Label text="AudlioLibro" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
                   <Label text="Duracion" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
                   <Label text="Formato" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-                  <TextField fx:id="txtDuracion" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <TextField fx:id="txtFormato" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <TextField fx:id="txtDuracion" promptText="En segundos..." style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <TextField fx:id="txtFormato" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <tooltip>
+                        <Tooltip text="Mp3, Mp4, Wav " />
+                     </tooltip></TextField>
                   <ComboBox fx:id="comboBoxCategoria" prefHeight="25.0" prefWidth="167.0" style="-fx-background-radius: 20;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                </children>
                <VBox.margin>

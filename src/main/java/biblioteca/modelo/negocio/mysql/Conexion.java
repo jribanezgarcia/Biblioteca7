@@ -3,14 +3,15 @@ package biblioteca.modelo.negocio.mysql;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.SQLOutput;
+
 
 public class Conexion {
 
     private static final String HOST ="127.0.0.1";
     private static final String ESQUEMA="biblioteca";
     private static final String USUARIO="admin";
-    private static final String CONTRASENA="biblioteca-2026";
+    private static final String CONTRASENA="";
+
 
     private static Connection conexion = null;
     //evitamos que se instancie
