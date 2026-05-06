@@ -98,7 +98,7 @@ public class FormularioUsuarioController {
                 //creamos un nuevo objeto para pasarselo al controlador
                 Direccion direccion= new Direccion(via,numero,cp,localidad);
                 this.registro = new Usuario(dni,nombre,email,direccion);
-                Dialogos.mostrarDialogoInformacion("Mensaje Usuario","Usuario modificado correctamente");
+
                 Stage escenarioActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 escenarioActual.close();
 

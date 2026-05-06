@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -45,6 +46,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Solo se puede dar de baja un Usuario&#10;que no tenga préstamos asociados" />
+                     </tooltip>
                   </Button>
                   <Label text="Baja Usuario" textFill="#f5f5f580">
                      <font>
@@ -63,6 +67,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Solo se puede Modificar un Usuario&#10;que no tenga préstamos asociados" />
+                     </tooltip>
                   </Button>
                   <Label text="Modificar Usuario" textFill="#f5f5f580">
                      <font>

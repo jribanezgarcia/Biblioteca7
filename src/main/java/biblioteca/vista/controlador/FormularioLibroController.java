@@ -182,7 +182,7 @@ public class FormularioLibroController implements Initializable {
                    this.registro = new Libro(isbn, titulo, anio, categoria);
                }
                for(Autor autor : listaAutores) this.registro.addAutor(autor);
-               Dialogos.mostrarDialogoInformacion("Modificar Libro","Libro modificado correctamente");
+
                Stage escenario = (Stage) ((Node) event.getSource()).getScene().getWindow();
                escenario.close();
 

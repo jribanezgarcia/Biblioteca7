@@ -133,6 +133,7 @@ public class LibrosController implements Initializable {
                     try{
                         Vista.getInstancia().getControlador().baja(libroViejo);
                         Vista.getInstancia().getControlador().alta(libroModificado);
+                        biblioteca.vista.utilidades.Dialogos.mostrarDialogoInformacion("Modificar Libro","Libro modificado correctamente");
                     }catch (Exception e){
                         Dialogos.mostrarDialogoAdvertencia("ERROR Editar Libro",e.getMessage());
                     }

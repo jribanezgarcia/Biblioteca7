@@ -104,8 +104,12 @@ public class Usuarios {
             }
             return true;
 
-        } catch (SQLException e) {
-            throw new Exception("ERROR MySQL " + e.getMessage());
+        }catch (SQLException e){
+            if(e.getErrorCode()==1451){
+                throw new Exception("No se puede borrar el usuario "+usuario.getNombre()+
+                        " porque tiene préstamos activos");
+            }
+            throw new Exception("ERROR MySQL "+e.getMessage());
         }
 
     }

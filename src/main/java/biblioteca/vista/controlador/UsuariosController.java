@@ -186,6 +186,7 @@ public class UsuariosController implements Initializable {
                     try{
                         Vista.getInstancia().getControlador().baja(usuarioViejo);
                         Vista.getInstancia().getControlador().alta(usuarioModificado);
+                        Dialogos.mostrarDialogoInformacion("Mensaje Usuario","Usuario modificado correctamente");
                     } catch (Exception e) {
                         Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
                     }

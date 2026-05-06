@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -45,6 +46,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Solo se puede dar de baja&#10;un libro que no tenga prestamos asociados" />
+                     </tooltip>
                   </Button>
                   <Label text="Baja Libro" textFill="#f5f5f580">
                      <font>
@@ -63,6 +67,9 @@
                            </image>
                         </ImageView>
                      </graphic>
+                     <tooltip>
+                        <Tooltip text="Solo se puede Modificar un libro&#10;que no tenga préstamos asoaciados" />
+                     </tooltip>
                   </Button>
                   <Label text="Modificar Libro" textFill="#f5f5f580">
                      <font>

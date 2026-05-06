@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional." />
+    <list default="true" id="810275ca-1643-4324-896f-084e50391ad3" name="Changes" comment="Modificada el tamaño de las imagenes y conexion a base de datos en la nube. Aplicacion testeada y funcional.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/Usuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/Usuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/mysql/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/modelo/negocio/mysql/Conexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioLibroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioLibroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioUsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/FormularioUsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LibrosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/LibrosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/UsuariosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/vista/controlador/UsuariosController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Libros.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Libros.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/biblioteca/vista/recursos/Usuarios.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,34 +86,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Biblioteca7 [:biblioteca.AppBiblioteca.main()].executor": "Run",
-    "Gradle.Biblioteca7 [:biblioteca.AppBibliotecaFX.main()].executor": "Run",
-    "Gradle.Biblioteca7 [:biblioteca.LanzadorVentanaPrincipal.main()].executor": "Run",
-    "Gradle.Biblioteca7 [:biblioteca.LanzadoraMain.main()].executor": "Run",
-    "Gradle.Biblioteca7 [build].executor": "Run",
-    "Gradle.Biblioteca7 [run].executor": "Run",
-    "Gradle.Biblioteca7.executor": "Run",
-    "Gradle.Build Biblioteca7.executor": "Run",
-    "Gradle.PrestamosIT (1).executor": "Run",
-    "Gradle.PrestamosIT.executor": "Run",
-    "Gradle.VistaIT (1).executor": "Run",
-    "Gradle.VistaIT.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Rebasing main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/juan/Desktop/DAM/programacion/proyectos/Biblioteca7/src/main/resources/biblioteca/vista/recursos",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.appearance"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Biblioteca7 [:biblioteca.AppBiblioteca.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Biblioteca7 [:biblioteca.AppBibliotecaFX.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Biblioteca7 [:biblioteca.LanzadorVentanaPrincipal.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Biblioteca7 [:biblioteca.LanzadoraMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Biblioteca7 [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Biblioteca7 [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Biblioteca7.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Biblioteca7.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PrestamosIT (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PrestamosIT.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VistaIT (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VistaIT.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juan/Desktop/DAM/programacion/proyectos/Biblioteca7/src/main/resources/biblioteca/vista/recursos&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\juan\Desktop\DAM\programacion\proyectos\Biblioteca7\src\main\resources\biblioteca\vista\recursos" />
@@ -172,8 +182,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Biblioteca7 [run]" />
         <item itemvalue="Gradle.Biblioteca7 [build]" />
+        <item itemvalue="Gradle.Biblioteca7 [run]" />
         <item itemvalue="Gradle.Biblioteca7 [run]" />
         <item itemvalue="Gradle.Biblioteca7 [build]" />
         <item itemvalue="Gradle.Biblioteca7 [run]" />
