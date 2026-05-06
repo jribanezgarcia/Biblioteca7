@@ -72,33 +72,28 @@ public class UsuariosController implements Initializable {
 
 
     @FXML
-    void addUsuario(ActionEvent event) throws Exception {
-        FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioUsuario.fxml"));
-        Parent raiz = fxmlLoader.load();
-        Scene escenaAMUsuaios = new Scene(raiz);
-        //pasamos el controlador a la nueva ventana
-        FormularioUsuarioController cF= fxmlLoader.getController();
-        cF.setListaUsuarios(this.listaUsuarios);
-        cF.setRegistro(null);
-        Stage escenarioAMUsuarios= new Stage();
-        escenarioAMUsuarios.initModality(Modality.APPLICATION_MODAL);
-        escenarioAMUsuarios.setTitle("Formulario Usuario");
-        escenarioAMUsuarios.setScene(escenaAMUsuaios);
-        escenarioAMUsuarios.setResizable(false);
-        escenarioAMUsuarios.showAndWait();
-        //refrescamos la tabla despues de añadir un usuario
-        //Añadimos el usuario a la base de datos.
-        Usuario u = cF.getRegistro();
-        if(u!=null){
-            try{
+    void addUsuario(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioUsuario.fxml"));
+            Parent raiz = fxmlLoader.load();
+            Scene escenaAMUsuaios = new Scene(raiz);
+            FormularioUsuarioController cF= fxmlLoader.getController();
+            cF.setListaUsuarios(this.listaUsuarios);
+            cF.setRegistro(null);
+            Stage escenarioAMUsuarios= new Stage();
+            escenarioAMUsuarios.initModality(Modality.APPLICATION_MODAL);
+            escenarioAMUsuarios.setTitle("Formulario Usuario");
+            escenarioAMUsuarios.setScene(escenaAMUsuaios);
+            escenarioAMUsuarios.setResizable(false);
+            escenarioAMUsuarios.showAndWait();
+            Usuario u = cF.getRegistro();
+            if(u!=null){
                 Vista.getInstancia().getControlador().alta(u);
-            } catch (Exception e) {
-                Dialogos.mostrarDialogoAdvertencia("ERROR", e.getMessage());
             }
+            this.refrescarTabla();
+        } catch (Exception e) {
+            Dialogos.mostrarDialogoAdvertencia("ERROR Añadir Usuario", e.getMessage());
         }
-
-        this.refrescarTabla();
-
     }
 
     @Override
@@ -116,7 +111,7 @@ public class UsuariosController implements Initializable {
         listaUsuariosVisible= FXCollections.observableArrayList();
         //se la pasamos a la tabla
         this.tablaUsuarios.setItems(listaUsuariosVisible);
-        //tengo que hacer un try catch para manejar la excepcion puesto que inizialice no deja hacer throws
+        //tengo que hacer un try catch para manejar la excepcion puesto que initialize no deja hacer throws
         //cargamos la lista de la BD
         try {
             this.listaUsuarios= Vista.getInstancia().getControlador().listadoUsuario();
@@ -205,7 +200,7 @@ public class UsuariosController implements Initializable {
         this.registro = this.tablaUsuarios.getSelectionModel().getSelectedItem();
     }
 
-    //metodo para pasar el array que viene de la BD a la ObservableTable
+    //metodo para pasar la List que viene de la BD a la ObservableTable
     private void refrescarTabla() throws Exception {
         this.registro = null;
         this.tablaUsuarios.getSelectionModel().clearSelection();

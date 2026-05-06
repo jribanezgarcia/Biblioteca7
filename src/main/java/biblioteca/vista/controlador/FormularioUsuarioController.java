@@ -87,7 +87,7 @@ public class FormularioUsuarioController {
                 Direccion direccion = new Direccion(via,numero,cp,localidad);
                 Usuario u= new Usuario(dni,nombre,email,direccion);
                 if(!this.listaUsuarios.contains(u)){
-                    Dialogos.mostrarDialogoAdvertencia("Mensaje Usuario","Usuario añadido correctamente");
+                    Dialogos.mostrarDialogoInformacion("Mensaje Usuario","Usuario añadido correctamente");
                     this.registro=u;
                     Stage escenarioActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     escenarioActual.close();

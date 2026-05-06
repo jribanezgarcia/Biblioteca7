@@ -2,11 +2,8 @@ package biblioteca.vista.utilidades;
 
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.time.LocalDate;
 import java.util.Optional;
 
 public class Dialogos {

@@ -20,7 +20,6 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -30,7 +29,7 @@ import javafx.scene.input.KeyEvent;
 
 public class PrestamosController implements Initializable {
 
-    DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     @FXML
     private Button botonDevolver;
 
@@ -78,11 +77,24 @@ public class PrestamosController implements Initializable {
                 escenario.setScene(escena);
                 escenario.setResizable(false);
                 escenario.showAndWait();
-
                 LocalDate fDevolucion= cF.getFechaDevolucion();
+                //si la fecha es distinta a null es que se puede prestar el libro
+                if (fDevolucion!=null){
+                    if(fDevolucion.isBefore(this.registro.getfInicio())){
+                        Dialogos.mostrarDialogoAdvertencia("Error de fecha",
+                                "La fecha de devolución no puede ser anterior a la fecha del préstamo");
+                    }else{
+                        try{
+                            Vista.getInstancia().getControlador().devolver(this.registro.getLibro(),this.registro.getUsuario(),fDevolucion);
+                            Dialogos.mostrarDialogoInformacion("Devolver Libro","Libro devuelto correctamente");
+                        } catch (Exception e) {
+                            Dialogos.mostrarDialogoError("ERROR al devolver el préstamo ",e.getMessage());
+                        }
 
-                Vista.getInstancia().getControlador().devolver(this.registro.getLibro(),this.registro.getUsuario(),fDevolucion);
-                Dialogos.mostrarDialogoInformacion("Devolver Libro","Libro devuelto correctamente");
+                    }
+
+                }
+
             } catch (Exception e) {
                 Dialogos.mostrarDialogoAdvertencia("ERROR",e.getMessage());
             }
@@ -90,28 +102,28 @@ public class PrestamosController implements Initializable {
         }
     }
     @FXML
-    void PrestarLibro(ActionEvent event) throws Exception {
-        FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioPrestamo.fxml"));
-        Parent raiz = fxmlLoader.load();
-        Scene escena = new Scene(raiz);
-        FormularioPrestamoController cF= fxmlLoader.getController();
-
-        //pasamos las listas al formulario de prestamos
-        cF.setListaLibros(Vista.getInstancia().getControlador().listadoLibros());
-        cF.setListaUsuarios(Vista.getInstancia().getControlador().listadoUsuario());
-        Stage escenario= new Stage();
-        escenario.initModality(Modality.APPLICATION_MODAL);
-        escenario.setTitle("Realizar Prestamo");
-        escenario.setScene(escena);
-        escenario.setResizable(false);
-        escenario.showAndWait();
-
-        Prestamo p = cF.getRegistro();
-        if(p != null){
-            Vista.getInstancia().getControlador().prestar(p.getLibro(), p.getUsuario(), p.getfInicio());
+    void PrestarLibro(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader=new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioPrestamo.fxml"));
+            Parent raiz = fxmlLoader.load();
+            Scene escena = new Scene(raiz);
+            FormularioPrestamoController cF= fxmlLoader.getController();
+            cF.setListaLibros(Vista.getInstancia().getControlador().listadoLibros());
+            cF.setListaUsuarios(Vista.getInstancia().getControlador().listadoUsuario());
+            Stage escenario= new Stage();
+            escenario.initModality(Modality.APPLICATION_MODAL);
+            escenario.setTitle("Realizar Prestamo");
+            escenario.setScene(escena);
+            escenario.setResizable(false);
+            escenario.showAndWait();
+            Prestamo p = cF.getRegistro();
+            if(p != null){
+                Vista.getInstancia().getControlador().prestar(p.getLibro(), p.getUsuario(), p.getfInicio());
+            }
+            this.refrescarTabla();
+        } catch (Exception e) {
+            Dialogos.mostrarDialogoError("ERROR Prestar Libro", e.getMessage());
         }
-
-        this.refrescarTabla();
     }
 
     @Override
@@ -120,12 +132,12 @@ public class PrestamosController implements Initializable {
         this.colILibro.setCellValueFactory(fila->new SimpleStringProperty(fila.getValue().getLibro().getTitulo()));
         //Usamos expresiones lambda para sacar la fecha y cambiamos el formato a formato español.
         this.colFechaInicio.setCellValueFactory(
-                fila->new SimpleStringProperty(fila.getValue().getfInicio().format(formato).toString()));
-        //hacemos otra lambda con un condional para que si no es null transforme al formato español y sino que ponga vacio.
+                fila->new SimpleStringProperty(fila.getValue().getfInicio().format(FORMATO_FECHA).toString()));
+        //hacemos otra lambda con un condicional para que si no es null transforme al formato español y sino que ponga vacio.
         this.colFechaDevolucion.setCellValueFactory(fila -> {
             LocalDate fd = fila.getValue().getfDevolucion();
             if(fd!=null){
-                return new SimpleStringProperty(fd.format(formato).toString());
+                return new SimpleStringProperty(fd.format(FORMATO_FECHA).toString());
             }else{
                 return new SimpleStringProperty("");
             }
@@ -148,7 +160,7 @@ public class PrestamosController implements Initializable {
         try {
             this.refrescarTabla();
         } catch (Exception e) {
-            biblioteca.utilidades.Dialogos.mostrarDialogoError("ERROR al inicializar",e.getMessage());
+            Dialogos.mostrarDialogoError("ERROR al inicializar",e.getMessage());
         }
 
     }

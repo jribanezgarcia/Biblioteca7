@@ -2,7 +2,6 @@ package biblioteca.vista.controlador;
 
 import biblioteca.modelo.dominio.Autor;
 import biblioteca.utilidades.Dialogos;
-import biblioteca.vista.Vista;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

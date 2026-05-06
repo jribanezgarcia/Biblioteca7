@@ -23,7 +23,6 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -66,30 +65,28 @@ public class LibrosController implements Initializable {
 
 
     @FXML
-    void addLibro(ActionEvent event) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioLibro.fxml"));
-        Parent raiz = fxmlLoader.load();
-        Scene escena = new Scene(raiz);
-        //pasamos este controler a la nueva clase.
-        FormularioLibroController cF = fxmlLoader.getController();
-        cF.setListaLibros(this.listaLibros);
-        cF.setRegistro(null);
-        Stage escenarioDMLibro = new Stage();
-        escenarioDMLibro.initModality(Modality.APPLICATION_MODAL);
-        escenarioDMLibro.setTitle("Formulario Libro");
-        escenarioDMLibro.setScene(escena);
-        escenarioDMLibro.setResizable(false);
-        escenarioDMLibro.showAndWait();
-        Libro l = cF.getRegistro();
-        if (l != null) {
-            try {
+    void addLibro(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(LocalizadorRecursos.class.getResource("FormularioLibro.fxml"));
+            Parent raiz = fxmlLoader.load();
+            Scene escena = new Scene(raiz);
+            FormularioLibroController cF = fxmlLoader.getController();
+            cF.setListaLibros(this.listaLibros);
+            cF.setRegistro(null);
+            Stage escenarioDMLibro = new Stage();
+            escenarioDMLibro.initModality(Modality.APPLICATION_MODAL);
+            escenarioDMLibro.setTitle("Formulario Libro");
+            escenarioDMLibro.setScene(escena);
+            escenarioDMLibro.setResizable(false);
+            escenarioDMLibro.showAndWait();
+            Libro l = cF.getRegistro();
+            if (l != null) {
                 Vista.getInstancia().getControlador().alta(l);
-            } catch (Exception e) {
-                Dialogos.mostrarDialogoAdvertencia("ERROR Añadir Libro", e.getMessage());
             }
-
+            this.refrescarTabla();
+        } catch (Exception e) {
+            Dialogos.mostrarDialogoAdvertencia("ERROR Añadir Libro", e.getMessage());
         }
-        this.refrescarTabla();
     }
 
     @FXML
@@ -133,7 +130,7 @@ public class LibrosController implements Initializable {
                     try{
                         Vista.getInstancia().getControlador().baja(libroViejo);
                         Vista.getInstancia().getControlador().alta(libroModificado);
-                        biblioteca.vista.utilidades.Dialogos.mostrarDialogoInformacion("Modificar Libro","Libro modificado correctamente");
+                        Dialogos.mostrarDialogoInformacion("Modificar Libro","Libro modificado correctamente");
                     }catch (Exception e){
                         Dialogos.mostrarDialogoAdvertencia("ERROR Editar Libro",e.getMessage());
                     }

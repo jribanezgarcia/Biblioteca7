@@ -21,7 +21,7 @@ public class Vista {
     private static Vista instancia;
     private Controlador controlador;
 
-    public Vista() {
+    private Vista() {
     }
     public static Vista getInstancia(){
         if(instancia==null){

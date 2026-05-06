@@ -18,7 +18,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.time.Duration;
@@ -59,7 +58,7 @@ public class FormularioLibroController implements Initializable {
     private TextField txtTitulo;
     @FXML
     private ListView<Autor> listAutoresAniadidos;
-    //probamos si asi no hae nullpointerexception
+    //probamos si asi no hay nullpointerexception
     private List<Libro> listaLibros =new ArrayList<>();
     private List<Autor> listaAutores = new ArrayList<>();
     private Libro registro;
@@ -165,7 +164,7 @@ public class FormularioLibroController implements Initializable {
                 }
                //comprobamos que el libro no este ya en la lista, si es asi lo ponemos a null.
                if(!this.listaLibros.contains(l)){
-                   Dialogos.mostrarDialogoAdvertencia("Mensaje Libros","Libro añadido correctamente");
+                   Dialogos.mostrarDialogoInformacion("Mensaje Libros","Libro añadido correctamente");
                    this.registro=l;
                    Stage escenario = (Stage) ((Node) event.getSource()).getScene().getWindow();
                    escenario.close();

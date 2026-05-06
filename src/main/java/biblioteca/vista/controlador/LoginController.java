@@ -63,10 +63,10 @@ public class LoginController {
             }else if (passwordTxt.isBlank()){
                 txtMensajeLogin.setText("Password no puede estar en blanco");
             }else{
-                txtMensajeLogin.setText("ERROR al hacer login");
+                txtMensajeLogin.setText("Usuario y Password Incorrectas");
             }
         } catch (Exception e) {
-            throw new RuntimeException("ERROR entrarLogin "+e);
+            Dialogos.mostrarDialogoError("Error al iniciar sesión", e.getMessage());
         }
 
     }

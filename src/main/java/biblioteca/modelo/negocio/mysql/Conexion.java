@@ -10,8 +10,7 @@ public class Conexion {
     private static final String HOST ="127.0.0.1";
     private static final String ESQUEMA="biblioteca";
     private static final String USUARIO="admin";
-    private static final String CONTRASENA="";
-
+    private static final String CONTRASENA="biblioteca-2026";
 
     private static Connection conexion = null;
     //evitamos que se instancie
@@ -26,7 +25,7 @@ public class Conexion {
                 conexion= DriverManager.getConnection("jdbc:mysql://"+HOST+"/"+ESQUEMA,USUARIO,CONTRASENA);
                 System.out.println("Conexion a Base de Datos realizada correctamente");
             }catch (SQLException e){
-                //creamos una Excepcion aqui por si direra error la conexion con la base de datos.
+                //creamos una Excepción aqui por si hay error la conexion con la base de datos.
                 //esta excepcion se captuara en cada metodo de Negocio.
                 throw  new SQLException("Error al conectar con la base de datos "+e.getMessage());
             }
